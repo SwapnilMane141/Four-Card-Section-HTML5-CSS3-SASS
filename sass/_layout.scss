@@ -1,0 +1,8 @@
+.container{
+    display:block;
+    margin: 8rem auto;
+
+    @include respond(tab-port-small){
+        margin: 4rem auto;
+    }
+}

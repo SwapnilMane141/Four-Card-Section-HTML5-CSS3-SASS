@@ -1,0 +1,52 @@
+$color-primary: hsl(229, 6%, 66%);
+$color-primary-dark: hsl(234, 12%, 34%);
+$color-primary-light: hsl(0, 0%, 98%);
+
+$color-red: hsl(0, 78%, 62%);
+$color-Cyan: hsl(180, 62%, 55%);
+$color-Orange: hsl(34, 97%, 64%);
+$color-Blue: hsl(212, 86%, 64%);
+
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond(tab-land){ // width < 1200 ?
+        font-size: 56.25% ;  //1rem = 9px , 9/16  
+    }
+    
+    
+    @include respond(tab-port){ // width < 900 ?
+        font-size: 50%;    //1rem = 8px ,8/16
+    }
+    
+    
+    @include respond(big-desktop){ // min-width = 1650 ?
+        font-size: 75%; //1rem = 12px, 12/16    
+    }
+
+}
+
+body{
+    font-family: Poppins;
+    font-weight: 400;
+    color:$color-primary;
+    background-color: $color-primary-light;
+}
+
+
+
+
+
+
+
+
+
+

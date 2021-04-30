@@ -1,0 +1,141 @@
+.header{
+
+    .heading-primary{
+        display:block;
+        font-size: 3.2rem;
+        text-align: center;
+        letter-spacing: .1rem;
+        margin-bottom: 3rem;
+        
+
+        &__p1{
+            color:rgb(136, 136, 136);
+            margin-bottom: 1rem;
+        }
+
+        &__p2{
+            color:$color-primary-dark;
+            font-weight: 600;
+            word-spacing: .1rem;
+        }
+    }
+
+    .heading-secondary{
+        display: block;
+        margin: 0 auto 6rem auto;
+        text-align: center;
+        font-size: 1.6rem;
+        width: 40%;
+
+        @include respond(phone-small){
+            width: 60%;
+        }
+
+        @include respond(telephone){
+            width: 80%;
+        }
+    }
+}
+
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include respond(phone){
+        flex-direction: column;
+        justify-content: center;
+        align-content: stretch;
+    }
+    
+    .middle-cards{
+        order: 2;
+    
+        @include respond(phone){
+            display: inline-block;
+            min-width: 100%;
+        }
+
+        @include respond(telephone){
+            margin-right: 1.5rem;
+        }
+
+        @include respond(telephone-small){
+            margin-right: 2rem;
+        }
+    }
+
+    &-box-1{
+        border-top: .3rem solid $color-red;  
+    }
+
+    &-box-2{
+        border-top: .3rem solid $color-Cyan;
+    }
+
+    &-box-3{
+        border-top: .3rem solid $color-Blue;
+        order: 3;
+    }
+
+    &-box-4{
+        border-top: .3rem solid $color-Orange;
+        margin-top: 3rem;
+    }
+
+    &-box-1,
+    &-box-2,
+    &-box-3,
+    &-box-4{
+        margin:2rem 3rem;
+        display: block;
+        height: 22rem;
+        width: 35rem;
+        max-width: 35rem;
+        padding:3rem 2rem;
+        border-radius: .5rem;
+        box-shadow: 0 .5rem 4rem rgba(0,0,0,.2);
+        position: relative;
+
+        @include respond(phone){
+            min-width: 90%;
+        }
+
+        .cards-image{
+            display: block;
+            height: 6rem;
+            width: auto;
+            position: absolute;
+            top:60%;
+            right: 10%;
+
+            @include respond(phone-large){
+                height: 5rem;
+                top:65%;
+            }
+        }
+    }
+
+    &-box{
+
+        &__text{
+
+
+            &--heading{
+                color:$color-primary-dark;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                font-weight: 600;
+            }
+
+            &--description{
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+                width: 90%;
+            }
+        }
+
+        
+    }
+}
